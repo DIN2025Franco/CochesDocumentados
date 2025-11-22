@@ -1,26 +1,38 @@
-import GlobalContent from './GlobalContent.jsx'
-import TarjetaCoche from './TarjetaCoche.jsx'
-import coches from './data/coches.js'
-import './index.css'
+import { Routes, Route, Navigate } from "react-router-dom";
+import Header from "./components/Header.jsx";
+import Home from "./pages/Home.jsx";
+import Admin from "./pages/Admin.jsx";
+import ContenidoPrincipal from './pages/ContenidoPrincipal.jsx';
+import CatalogoCoches from './pages/CatalogoCoches.jsx';
+import ContenedorGlobal from "./components/ContenedorGlobal.jsx";
+import CocheDetalles from "./pages/CocheDetalles.jsx";
 
 function App() {
   return (
     <>
-      <GlobalContent titulo="Nuestros Vehículos" subtitulo="Prestigio, Calidad y Estetica">
-      {coches.map((coche, index) =>(
-          <TarjetaCoche
-            key={index}
-            nombre={coche.nombre}
-            foto={coche.imagen}
-            descripcion={coche.descripcion}
-            precio={coche.precio}
-          >
-          </TarjetaCoche>
-        )
-      )}
-    </GlobalContent>
+      <Header />
+      <Routes>
+        <Route element={<ContenidoPrincipal />}>
+          <Route path="/" element={<Home />} />
+          <Route path="inicio" element={<Navigate to="/" />} />
+          <Route path="catalogo" element={<CatalogoCoches />} />
+          <Route path="admin" element={<Admin />} />
+          <Route path="/coches/:index" element={<CocheDetalles />} />
+        </Route>
+
+        {/* Pagina 404 */}
+        <Route
+          path="*"
+          element={
+            <ContenedorGlobal titulo="Pagina no encontrada">
+              <p>La ruta no existe</p>
+            </ContenedorGlobal>
+          }
+        />
+
+      </Routes>
     </>
-  )
+  );
 }
 
 export default App

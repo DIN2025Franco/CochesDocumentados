@@ -6,7 +6,6 @@ function Nav() {
 
   return (
     <section className="relative z-50 md:flex md:items-center">
-      
       {/* Botón hamburguesa: solo visible en móvil, alterna menú */}
       <button
         onClick={() => setOpen(!open)}

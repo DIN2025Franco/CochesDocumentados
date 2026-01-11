@@ -63,56 +63,48 @@ body {
     font-size: var(--text-large-bold-font-size);
     font-weight: var(--text-large-bold-font-weight);
     line-height: var(--text-large-bold-line-height);
-    color: var(--color-black-1);
   }
   
   .body-large {
     font-size: var(--text-large-regular-font-size);
     font-weight: var(--text-large-regular-font-weight);
     line-height: var(--text-large-regular-line-height);
-    color: var(--color-black-2);
   }
   
   .body-medium-bold {
     font-size: var(--text-medium-bold-font-size);
     font-weight: var(--text-medium-bold-font-weight);
     line-height: var(--text-medium-bold-line-height);
-    color: var(--color-black-2);
   }
   
   .body-medium {
     font-size: var(--text-medium-font-size);
     font-weight: var(--text-medium-font-weight);
     line-height: var(--text-medium-line-height);
-    color: var(--color-black-3);
   }
   
   .body-normal-bold {
     font-size: var(--text-normal-bold-font-size);
     font-weight: var(--text-normal-bold-font-weight);
     line-height: var(--text-normal-bold-line-height);
-    color: var(--color-black-3);
   }
   
   .body-normal {
     font-size: var(--text-normal-font-size);
     font-weight: var(--text-normal-font-weight);
     line-height: var(--text-normal-line-height);
-    color: var(--color-black-4);
   }
   
   .body-small-bold {
     font-size: var(--text-small-bold-font-size);
     font-weight: var(--text-small-bold-font-weight);
     line-height: var(--text-small-bold-line-height);
-    color: var(--color-black-4);
   }
   
   .body-small {
     font-size: var(--text-small-font-size);
     font-weight: var(--text-small-font-weight);
     line-height: var(--text-small-line-height);
-    color: var(--color-black-4);
   }
   
   .border-primary {
@@ -129,4 +121,16 @@ body {
 
   .secondary-bg {
     background-color: var(--color-secondary);
+  }
+
+  .error-color {
+    color: var(--color-error);
+  }
+
+  .hover-primary-color:hover {
+    background-color: rgb(184, 146, 22);
+  }
+
+  .custom-shadow {
+    box-shadow: 0 10px 10px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
   }
